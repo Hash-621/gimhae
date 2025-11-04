@@ -3,10 +3,310 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <title>test</title>
+    <style>
+      * {
+        text-align: center;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      *:link {
+        color: white;
+      }
+
+      *:visited {
+        color: white;
+      }
+
+      body {
+        margin: 0 auto;
+      }
+
+      a {
+        border: 1px solid rgba(255, 255, 255, 0);
+      }
+
+      .header-nav-wrap {
+        background-color: #2a2f42;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      nav {
+        display: flex;
+        justify-content: flex-start;
+        height: 50px;
+      }
+
+      nav ul {
+        display: flex;
+        margin: 0px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav a {
+        height: 50px;
+      }
+
+      nav li {
+        margin: 15px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        font-size: 90%;
+      }
+
+      a:active {
+        border: 1px dotted red;
+      }
+
+      .header-logo {
+        display: flex;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo {
+        width: 300px;
+      }
+
+      .search {
+        border: 2px solid #0a6eff;
+        display: flex;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-wrapper {
+        margin: 50px;
+      }
+
+      .search-select {
+        border: 0px;
+        padding: 5px;
+      }
+
+      .search-search {
+        border: 0px;
+        text-align: left;
+        padding: 10px;
+        width: 22 0px;
+      }
+
+      .search-icon {
+        background-color: #0a6eff;
+        padding: 0px;
+        width: 40px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .search2 {
+        border: 2px solid #0a6eff;
+        display: flex;
+        height: 35px;
+        margin: 10px;
+      }
+
+      .extra-links {
+        margin: 40px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .extra-links a img {
+        height: 40px;
+        margin: 3px;
+      }
+
+      #festival_02 {
+        height: 80px;
+      }
+
+      .header-bottom-wrap {
+        background-color: #0057b8;
+        height: 55px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+      }
+    </style>
   </head>
   <body>
-    test writing
-    github test
+    <header>
+      <div class="header-nav-wrap">
+        <nav>
+          <ul>
+            <a href="#"><li>시정포털</li></a>
+            <a href="#" style="background-color: #ba2129"
+              ><li><b>관광포털</b></li></a
+            >
+            <a href="#"><li>분야포털</li></a>
+            <a href="#"><li>공공예약포털</li></a>
+            <a href="#"><li>주민자치포털</li></a>
+            <a href="#"><li>기업119</li></a>
+            <a href="#"><li>김해시의회</li></a>
+            <a href="#"><li>공공데이터</li></a>
+            <a href="#"><li>스마트도시</li></a>
+            <a href="#"><li>교통정보</li></a>
+            <a href="#"><li>국가상징</li></a>
+            <a :active style="border: 0px; padding: 50px; color: lightgray"
+              ><li>|</li></a
+            >
+            <a href="#"><li>홈</li></a>
+            <a href="#"><li>누리집 안내</li></a>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-logo">
+        <div class="logo-wrapper">
+          <a href="#"><img src="common/logo@2x_2025.png" class="logo" /></a>
+        </div>
+        <div class="search-wrapper">
+          <div class="search">
+            <select class="search-select">
+              <option>통합검색</option>
+              <option>여행지</option>
+              <option>음식</option>
+            </select>
+            <input
+              type="search"
+              id="search"
+              name="search"
+              class="search-search"
+              placeholder="검색어"
+            />
+            <div class="search-icon"><a href="#">🔍</a></div>
+          </div>
+        </div>
+        <div class="search2">
+          <select>
+            <option>여행자맞춤검색</option>
+          </select>
+        </div>
+        <div class="extra-links">
+          <a href="https://blog.naver.com/ghhamohamo"
+            ><img src="common/bn1blog01@3x.png" />
+          </a>
+          <a href="https://www.facebook.com/romanticgimhae/"
+            ><img src="common/bn1facebook@3x.png" />
+          </a>
+          <a href="https://story.kakao.com/ch/gimhae"
+            ><img src="common/bn1kakaostory@3x.png" />
+          </a>
+          <a href="https://www.instagram.com/gimhae_tour/"
+            ><img src="common/snslink2instagram.png" />
+          </a>
+          <a href="https://festa.gyeongnam.go.kr/index.do?siteCd=001"
+            ><img src="common/festival_02.png" id="festival_02" />
+          </a>
+        </div>
+      </div>
+      <div class="header-bottom-wrap">
+        <nav>
+          <ul>
+            <a href="#"><li>소개</li></a>
+            <a href="#"><li>축제</li></a>
+            <a href="#"><li>여행지</li></a>
+            <a href="#"><li>문화유산</li></a>
+            <a href="#"><li>음삭</li></a>
+            <a href="#"><li>숙박</li></a>
+            <a href="#"><li>☰</li></a>
+            <a :active style="border: 0px; padding: 100px"><li></li></a>
+          </ul>
+          <ul style="font-size: medium">
+            <a href="#"><li>관광지도</li></a>
+            <a href="#"><li>주변대중교통</li></a>
+            <a href="#"><li>정보센터</li></a>
+            <a href="#"><li>사이트맵</li></a>
+            <a href="#" style="color: goldenrod; font-weight: 900"
+              ><li><b>스마트관광</b></li></a
+            >
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="poster">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="common/v20250103_01.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="common/v20250103_02.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="common/v20250103_03.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div>
+        <!-- TODO 데이터 연결하는 곳 만들기-->
+      </div>
+    </main>
+    <footer></footer>
+    test writing github test
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
