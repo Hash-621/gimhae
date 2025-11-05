@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김해에반해 관광포털</title>
+    <style>
+      * {
+        text-align: center;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      *:link {
+        color: white;
+        text-decoration: none;
+      }
+
+      *:visited {
+        color: white;
+        text-decoration: none;
+      }
+
+      body {
+        margin: 0 auto;
+      }
+
+      .header-nav-wrap {
+        background-color: #2a2f42;
+        height: 50px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      nav {
+        display: flex;
+        justify-content: flex-start;
+        height: 50px;
+      }
+
+      nav ul {
+        display: flex;
+        margin: 0px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav a {
+        height: 50px;
+      }
+
+      nav li {
+        margin: 15px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        font-size: 90%;
+      }
+
+      a:active {
+        border: 1px dotted red;
+      }
+
+      .header-logo {
+        display: flex;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo {
+        width: 300px;
+      }
+
+      .search {
+        border: 2px solid #0a6eff;
+        display: flex;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-wrapper {
+        margin: 50px;
+      }
+
+      .search-select {
+        border: 0px;
+        padding-right: 10px;
+      }
+
+      .search-search {
+        border: 0px;
+        text-align: left;
+        padding-left: 10px;
+        width: 210px;
+      }
+
+      .search-icon {
+        background-color: #0a6eff;
+        padding: 0px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .search2 {
+        border: 2px solid #0a6eff;
+        display: flex;
+        height: 35px;
+        margin: 10px;
+      }
+
+      .extra-links {
+        margin: 40px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .extra-links a img {
+        height: 40px;
+        margin: 3px;
+      }
+
+      #festival_02 {
+        height: 80px;
+      }
+
+      .header-bottom-wrap {
+        background-color: #0057b8;
+        height: 55px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+      }
+
+      .main-top {
+        height: 200px;
+        width: 100%;
+        background-image: url(common/cultural-bg.jpg);
+        margin-bottom: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-top h1 {
+        margin: 0px;
+        text-shadow: 1px 0px 5px black;
+      }
+
+      .main-top-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-top-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid lightgray;
+        width: 1200px;
+        margin-bottom: 50px;
+      }
+
+      .main-top-script {
+        text-align: left;
+      }
+
+      .main-top-sns {
+        text-align: right;
+        display: flex;
+        gap: 10px;
+      }
+
+      .main-top-sns img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+      }
+      .footer-top {
+        border-top: 1px solid #23262d;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        transition-duration: 0.3s;
+      }
+
+      .footer-top a {
+        color: #23262d;
+        margin: 15px 10px 15px 10px;
+      }
+
+      .footer-top a:hover {
+        color: #0a6eff;
+      }
+
+      .footer-bottom {
+        background-color: #23262d;
+        color: white;
+        height: 300px;
+        font-size: small;
+      }
+
+      .footer-select {
+        height: 50px;
+        border: 1px solid gray;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-select select {
+        background-color: #23262d;
+        color: white;
+        border: 1px solid gray;
+        padding: 10px 10px 10px 10px;
+        width: 220px;
+      }
+
+      .footer-select option {
+        padding: 0px;
+        width: 220px;
+        text-align: left;
+      }
+
+      .footer-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-text-wrapper {
+        width: 1100px;
+        display: flex;
+        color: lightgrey;
+      }
+
+      .footer-text {
+        height: 170px;
+        margin-top: 25px;
+        width: 1100px;
+        text-align: left;
+      }
+
+      .info {
+        color: gray;
+        width: 100%;
+        text-align: left;
+      }
+
+      .info a {
+        color: white;
+        font-weight: bolder;
+      }
+
+      .address {
+        text-align: left;
+        margin-top: 15px;
+      }
+
+      .copyright {
+        text-align: left;
+        margin-top: 15px;
+        color: gray;
+      }
+
+      .footer-logo {
+        height: 55px;
+        text-align: right;
+        margin-right: 20px;
+      }
+
+      .footer-logo img {
+        height: 40px;
+        margin: 0px 10px 10px 10px;
+      }
+
+      .fixed-top a {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(87, 87, 87);
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: small;
+      }
+
+      .main-container-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main-container {
+        width: 1200px;
+      }
+
+      .option-container {
+        padding: 20px;
+        border: 1px solid gray;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .option-container select {
+        padding: 15px 10px 15px 10px;
+        border: 1px solid gray;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .totalCount {
+        width: 400px;
+        font-size: larger;
+        display: flex;
+      }
+
+      .option-select {
+        display: flex;
+        width: 800px;
+        justify-content: right;
+        gap: 50px;
+        margin-right: 50px;
+      }
+
+      .option-select label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .board-container {
+        height: 2500px;
+        padding: 10px;
+      }
+
+      .pagination-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        gap: 20px;
+      }
+
+      .number-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-nav-wrap">
+        <nav>
+          <ul>
+            <a href="#"><li>시정포털</li></a>
+            <a href="#" style="background-color: #ba2129"
+              ><li><b>관광포털</b></li></a
+            >
+            <a href="#"><li>분야포털</li></a>
+            <a href="#"><li>공공예약포털</li></a>
+            <a href="#"><li>주민자치포털</li></a>
+            <a href="#"><li>기업119</li></a>
+            <a href="#"><li>김해시의회</li></a>
+            <a href="#"><li>공공데이터</li></a>
+            <a href="#"><li>스마트도시</li></a>
+            <a href="#"><li>교통정보</li></a>
+            <a href="#"><li>국가상징</li></a>
+            <a
+              :active
+              style="border: 0px; padding: 0px 50px 0px 50px; color: lightgray"
+              ><li>|</li></a
+            >
+            <a href="#"><li>홈</li></a>
+            <a href="#"><li>누리집 안내</li></a>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-logo">
+        <div class="logo-wrapper">
+          <a href="index.html"
+            ><img src="common/logo@2x_2025.png" class="logo"
+          /></a>
+        </div>
+        <div class="search-wrapper">
+          <div class="search">
+            <select class="search-select">
+              <option>통합검색</option>
+              <option>여행지</option>
+              <option>음식</option>
+            </select>
+            <input
+              type="search"
+              id="search"
+              name="search"
+              class="search-search"
+              placeholder="검색어"
+            />
+            <div class="search-icon"><a href="#">🔍</a></div>
+          </div>
+        </div>
+        <div class="search2">
+          <select>
+            <option>여행자맞춤검색</option>
+          </select>
+        </div>
+        <div class="extra-links">
+          <a href="https://blog.naver.com/ghhamohamo"
+            ><img src="common/bn1blog01@3x.png" />
+          </a>
+          <a href="https://www.facebook.com/romanticgimhae/"
+            ><img src="common/bn1facebook@3x.png" />
+          </a>
+          <a href="https://story.kakao.com/ch/gimhae"
+            ><img src="common/bn1kakaostory@3x.png" />
+          </a>
+          <a href="https://www.instagram.com/gimhae_tour/"
+            ><img src="common/snslink2instagram.png" />
+          </a>
+          <a href="https://festa.gyeongnam.go.kr/index.do?siteCd=001"
+            ><img src="common/festival_02.png" id="festival_02" />
+          </a>
+        </div>
+      </div>
+      <div class="header-bottom-wrap">
+        <nav>
+          <ul>
+            <a href="intro.html"><li>소개</li></a>
+            <a href="festival.html"><li>축제</li></a>
+            <a href="tour.html"><li>여행지</li></a>
+            <a href="heritage.html"><li>문화유산</li></a>
+            <a href="food.html"><li>음식</li></a>
+            <a href="accommodation.html"><li>숙박</li></a>
+            <a href="#"><li>☰</li></a>
+            <a :active style="border: 0px; padding: 100px"><li></li></a>
+          </ul>
+          <ul style="font-size: medium">
+            <a href="#"><li>관광지도</li></a>
+            <a href="#"><li>주변대중교통</li></a>
+            <a href="#"><li>정보센터</li></a>
+            <a href="#"><li>사이트맵</li></a>
+            <a href="#" style="color: goldenrod; font-weight: 900"
+              ><li><b>스마트관광</b></li></a
+            >
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="main-top">
+        <h1>문화유산</h1>
+      </div>
+      <div class="main-top-wrapper">
+        <div class="main-top-title">
+          <div class="main-top-script"><h2>김해의 문화유산</h2></div>
+          <div class="main-top-sns">
+            <img src="common/bn1blog@2x.png" />
+            <img src="common/bn1facebook@2x.png" />
+            <img src="common/bn1twitter@2x.png" />
+            <img src="common/bn1kakaotalk@2x.png" />
+            <img src="common/bn1pdf@2x.png" />
+            <img src="common/bn1link@2x.png" />
+            <img src="common/bn1print.png" />
+          </div>
+        </div>
+      </div>
+      <div class="main-container-wrapper">
+        <div class="main-container">
+          <div class="option-container">
+            <div class="totalCount">
+              <p>총 <span>0</span>건의 게시물이 있습니다.</p>
+            </div>
+            <div class="option-select">
+              <label>
+                문화유산 분류
+                <select>
+                  <option>전체</option>
+                </select>
+              </label>
+              <label>
+                한눈에 보고 싶은 갯수
+                <select
+                  name="limitSize"
+                  id="limitSize"
+                  onchange="limitSizeOnChange(this.value)"
+                >
+                  <option value="5">5</option>
+                  <option value="10" selected>10</option>
+                  <option value="20">20</option>
+                </select>
+              </label>
+
+              <label>
+                페이지 갯수
+                <select
+                  name="pagingSize"
+                  id="pagingSize"
+                  onchange="pagingSizeOnChange(this.value)"
+                >
+                  <option value="5" selected>5</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="board-container">
+            <ul id="post-content-list"></ul>
+          </div>
+
+          <div class="pagination-container">
+            <button id="pre-button">이전</button>
+            <div class="number-button-wrapper"></div>
+            <button id="next-button">다음</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <a href="#">정책정보 모음</a>
+        <a href="#">삶의 질을 추구하는 국제슬로시티 김해</a>
+        <a href="#">유니세프 아동친화도시</a>
+        <a href="#">근로복지공단</a>
+        <a href="#">정부24</a>
+        <a href="#">위기상황 생활안전정보</a>
+        <a href="#">경매정보</a>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-select">
+          <select>
+            <option>부서/사업소</option>
+          </select>
+          <select>
+            <option>읍면동</option>
+          </select>
+          <select>
+            <option>유관기관</option>
+          </select>
+          <select>
+            <option>도/시/자치단체</option>
+          </select>
+          <select>
+            <option>김해시청</option>
+          </select>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-text-wrapper">
+            <div class="footer-text">
+              <div class="info">
+                <a href="#">개인정보처리방침</a>　|　
+                <a href="#">저작권정책</a>　|　
+                <a href="#">누리집이용안내</a>　|　
+                <a href="#">찾아오시는길</a>　|　
+                <a href="#">주차장안내</a>　|　
+                <a href="#">직원연락처(팩스포함)</a>
+              </div>
+              <p class="address">
+                50924 경상남도 김해시 김해대로 2491(부원동) 김해시청
+                관광진흥과<br />
+                문의전화 : 1577-9400(유료), 055-330-3114(유료)<br />
+                ※ 민원콜센터 운영시간: 평일(09:00~18:00), 토/일요일, 공휴일 및
+                근무시간 외에는 상담되지 않습니다.
+              </p>
+              <p class="copyright">
+                Copyright(C) Gimhae City. All Rights Reserved.
+              </p>
+              <p class="copyright">
+                https://www.gimhae.go.kr/tour.web 김해시 관광포털 클론코딩 연습
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-logo">
+          <img src="common/nextit-logo.png" /><img
+            src="common/nextit-logo.png"
+          />
+        </div>
+      </div>
+    </footer>
+    <div class="fixed-top">
+      <a href="#">TOP</a>
+    </div>
+
+    <script src="pagination.js"></script>
+    <script>
+      let currentPage = 1; // 현재 페이지
+      let totalPage = 0; // 총페이지
+      let pageGroup = 0; // 페이지 그룹수
+      let firstNumber = 1; // 숫자 시작점
+      let lastNumber = 5; // 숫자 종료점
+
+      window.onload = () => {
+        console.log("준비완료");
+
+        console.log(`총 데이터 개수 ${database.length}`);
+        // 지정된 페이지에서 시작번호와 종료번호 계산하기
+        updateFirstlast(1);
+
+        // 이걸 토대로 버튼 만들기
+        setPageButtons();
+
+        // 만들어진 버튼에 이벤트 달기
+        addNumberButtonListener();
+
+        // 이전, 다음 버튼 이벤트
+        addMovingButtonListener();
+
+        setPageOf(1);
+      };
+    </script>
+  </body>
+</html>

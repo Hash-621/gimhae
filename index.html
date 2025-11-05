@@ -337,22 +337,96 @@
         background-color: #23262d;
         color: white;
         height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: small;
       }
 
       .footer-select {
-        height: 45px;
+        height: 50px;
         border: 1px solid gray;
         width: 100%;
+        display: flex;
+        justify-content: center;
       }
 
       .footer-select select {
         background-color: #23262d;
         color: white;
         border: 1px solid gray;
-        padding: 10px 100px 10px 10px;
+        padding: 10px 10px 10px 10px;
+        width: 220px;
+      }
+
+      .footer-select option {
+        padding: 0px;
+        width: 220px;
+        text-align: left;
+      }
+
+      .footer-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-text-wrapper {
+        width: 1100px;
+        display: flex;
+        color: lightgrey;
+      }
+
+      .footer-text {
+        height: 170px;
+        margin-top: 25px;
+        width: 1100px;
+        text-align: left;
+      }
+
+      .info {
+        color: gray;
+        width: 100%;
+        text-align: left;
+      }
+
+      .info a {
+        color: white;
+        font-weight: bolder;
+      }
+
+      .address {
+        text-align: left;
+        margin-top: 15px;
+      }
+
+      .copyright {
+        text-align: left;
+        margin-top: 15px;
+        color: gray;
+      }
+
+      .footer-logo {
+        height: 55px;
+        text-align: right;
+        margin-right: 20px;
+      }
+
+      .footer-logo img {
+        height: 40px;
+        margin: 0px 10px 10px 10px;
+      }
+
+      .fixed-top a {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(87, 87, 87);
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: small;
       }
     </style>
   </head>
@@ -386,7 +460,9 @@
       </div>
       <div class="header-logo">
         <div class="logo-wrapper">
-          <a href="#"><img src="common/logo@2x_2025.png" class="logo" /></a>
+          <a href="index.html"
+            ><img src="common/logo@2x_2025.png" class="logo"
+          /></a>
         </div>
         <div class="search-wrapper">
           <div class="search">
@@ -431,12 +507,12 @@
       <div class="header-bottom-wrap">
         <nav>
           <ul>
-            <a href="#"><li>소개</li></a>
-            <a href="#"><li>축제</li></a>
-            <a href="#"><li>여행지</li></a>
-            <a href="#"><li>문화유산</li></a>
-            <a href="#"><li>음삭</li></a>
-            <a href="#"><li>숙박</li></a>
+            <a href="intro.html"><li>소개</li></a>
+            <a href="festival.html"><li>축제</li></a>
+            <a href="tour.html"><li>여행지</li></a>
+            <a href="heritage.html"><li>문화유산</li></a>
+            <a href="food.html"><li>음식</li></a>
+            <a href="accommodation.html"><li>숙박</li></a>
             <a href="#"><li>☰</li></a>
             <a :active style="border: 0px; padding: 100px"><li></li></a>
           </ul>
@@ -834,9 +910,43 @@
             <option>김해시청</option>
           </select>
         </div>
-        <!-- footer 마저 만들기 -->
+        <div class="footer-wrapper">
+          <div class="footer-text-wrapper">
+            <div class="footer-text">
+              <div class="info">
+                <a href="#">개인정보처리방침</a>　|　
+                <a href="#">저작권정책</a>　|　
+                <a href="#">누리집이용안내</a>　|　
+                <a href="#">찾아오시는길</a>　|　
+                <a href="#">주차장안내</a>　|　
+                <a href="#">직원연락처(팩스포함)</a>
+              </div>
+              <p class="address">
+                50924 경상남도 김해시 김해대로 2491(부원동) 김해시청
+                관광진흥과<br />
+                문의전화 : 1577-9400(유료), 055-330-3114(유료)<br />
+                ※ 민원콜센터 운영시간: 평일(09:00~18:00), 토/일요일, 공휴일 및
+                근무시간 외에는 상담되지 않습니다.
+              </p>
+              <p class="copyright">
+                Copyright(C) Gimhae City. All Rights Reserved.
+              </p>
+              <p class="copyright">
+                https://www.gimhae.go.kr/tour.web 김해시 관광포털 클론코딩 연습
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-logo">
+          <img src="common/nextit-logo.png" /><img
+            src="common/nextit-logo.png"
+          />
+        </div>
       </div>
     </footer>
+    <div class="fixed-top">
+      <a href="#">TOP</a>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
