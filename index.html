@@ -9,7 +9,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <title>test</title>
+    <title>김해에반해 관광포털</title>
     <style>
       * {
         text-align: center;
@@ -19,10 +19,12 @@
 
       *:link {
         color: white;
+        text-decoration: none;
       }
 
       *:visited {
         color: white;
+        text-decoration: none;
       }
 
       body {
@@ -31,6 +33,7 @@
 
       a {
         border: 1px solid rgba(255, 255, 255, 0);
+        text-decoration: none;
       }
 
       .header-nav-wrap {
@@ -87,7 +90,7 @@
       .search {
         border: 2px solid #0a6eff;
         display: flex;
-        height: 35px;
+        height: 40px;
         align-items: center;
         justify-content: center;
       }
@@ -98,21 +101,21 @@
 
       .search-select {
         border: 0px;
-        padding: 5px;
+        padding-right: 10px;
       }
 
       .search-search {
         border: 0px;
         text-align: left;
-        padding: 10px;
-        width: 22 0px;
+        padding-left: 10px;
+        width: 210px;
       }
 
       .search-icon {
         background-color: #0a6eff;
         padding: 0px;
         width: 40px;
-        height: 35px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -151,6 +154,206 @@
         color: white;
         font-size: larger;
       }
+
+      .restaurant {
+        margin-top: 50px;
+        text-align: center;
+        height: 450px;
+        color: white;
+      }
+
+      .restaurant-background {
+        background-image: url(common/bg4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        height: 200px;
+        margin-bottom: -200px;
+      }
+
+      .restaurant-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1120px;
+      }
+
+      .restaurant-card-container {
+        display: flex;
+        padding: 0px;
+      }
+
+      .restaurant-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .card1 {
+        background-color: white;
+        width: 250px;
+        height: 300px;
+        margin: 0px 15px 0px 15px;
+        color: black;
+        box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.329);
+      }
+
+      .card1-img img {
+        height: 180px;
+        width: 250px;
+      }
+
+      .card1-script {
+        text-align: left;
+        padding: 20px;
+      }
+
+      .trip {
+        margin-top: 50px;
+        text-align: center;
+        height: 450px;
+        color: black;
+      }
+
+      .trip-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1120px;
+      }
+
+      .card2 {
+        background-color: white;
+        width: 400px;
+        height: 370px;
+        margin: 0px 15px 0px 15px;
+        color: black;
+      }
+
+      .card2-img img {
+        height: 250px;
+        width: 400px;
+      }
+
+      .card2-script {
+        text-align: left;
+        padding: 20px;
+      }
+
+      .trip-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .trip-card-container {
+        display: flex;
+        padding: 0px;
+      }
+
+      .main-bottom {
+        margin: 120px 0px 100px 0px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .notice {
+        height: 305px;
+        width: 505px;
+        border: 1px solid lightgray;
+        padding: 0px;
+        margin: 20px;
+      }
+
+      .notice-title {
+        text-align: left;
+        font-size: larger;
+        height: 26px;
+        padding: 30px;
+      }
+
+      .notice-button {
+        border: 1px solid lightgray;
+        background-color: white;
+        padding: 0px 6px 0px 6px;
+        margin-left: 220px;
+      }
+
+      .notice-script {
+        padding: 20px;
+        font-size: 95%;
+      }
+
+      .notice-script li {
+        text-align: left;
+        padding: 7px;
+      }
+
+      .menu {
+        height: 305px;
+        width: 505px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+      }
+
+      .menu-item {
+        height: 150px;
+        width: 250px;
+        background-color: #673ab7;
+      }
+
+      .menu-img {
+        margin-top: 5px;
+        height: 100px;
+      }
+
+      .menu-script {
+        color: white;
+      }
+
+      .footer-top {
+        border-top: 1px solid #23262d;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        transition-duration: 0.3s;
+      }
+
+      .footer-top a {
+        color: #23262d;
+        margin: 15px 10px 15px 10px;
+      }
+
+      .footer-top a:hover {
+        color: #0a6eff;
+      }
+
+      .footer-bottom {
+        background-color: #23262d;
+        color: white;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .footer-select {
+        height: 45px;
+        border: 1px solid gray;
+        width: 100%;
+      }
+
+      .footer-select select {
+        background-color: #23262d;
+        color: white;
+        border: 1px solid gray;
+        padding: 10px 100px 10px 10px;
+      }
     </style>
   </head>
   <body>
@@ -171,7 +374,9 @@
             <a href="#"><li>스마트도시</li></a>
             <a href="#"><li>교통정보</li></a>
             <a href="#"><li>국가상징</li></a>
-            <a :active style="border: 0px; padding: 50px; color: lightgray"
+            <a
+              :active
+              style="border: 0px; padding: 0px 50px 0px 50px; color: lightgray"
               ><li>|</li></a
             >
             <a href="#"><li>홈</li></a>
@@ -297,12 +502,341 @@
           </button>
         </div>
       </div>
-      <div>
+      <div class="restaurant">
+        <div class="restaurant-background"></div>
         <!-- TODO 데이터 연결하는 곳 만들기-->
+        <div style="padding: 70px 0px 80px 0px; width: 100%; height: 50px">
+          <h3><b>김해의 '맛'에 빠지다!</b></h3>
+        </div>
+        <div class="restaurant-wrapper">
+          <div class="restaurant-card">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <ul class="restaurant-card-container">
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item">
+                  <ul class="restaurant-card-container">
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item">
+                  <ul class="restaurant-card-container">
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card1">
+                        <div class="card1-img">
+                          <img src="common/bg4.jpg" />
+                        </div>
+                        <div class="card1-script">dd</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trip">
+        <div style="padding: 70px 0px 80px 0px; width: 100%; height: 50px">
+          <h3><b>힐링 되는 색다른 여행지 </b></h3>
+          <div class="trip-wrapper">
+            <div class="trip-card">
+              <div id="carouselExample2" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <ul class="trip-card-container">
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="carousel-item">
+                    <ul class="trip-card-container">
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="carousel-item">
+                    <ul class="trip-card-container">
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="card2">
+                          <div class="card2-img">
+                            <img src="common/bg4.jpg" />
+                          </div>
+                          <div class="card2-script">dd</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExample2"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExample2"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-bottom">
+        <div class="notice">
+          <div class="notice-title">
+            <b style="margin-right: 100px">공지사항</b>
+            <button class="notice-button">+</button>
+          </div>
+          <ul class="notice-script">
+            <li>
+              경남에서 한 달 여행하기 '아름다운 김해' 참가자 모집 (D-day 8)
+            </li>
+            <li>경남에서 한 달 여행하기 '아름다운 김해' 2차 참가자 모집</li>
+            <li>경남에서 한 달 여행하기 '김해에 반해' 참가자 모집 공고(2차)</li>
+            <li>2024년 김해DMZ 관광콘텐츠에 역량강화된 교육 신청 안내</li>
+            <li>경남에서 한 달 여행하기 '김해에 반해' 참가자 모집 공고(2차)</li>
+          </ul>
+        </div>
+        <div class="menu">
+          <a href="#" class="menu-item"
+            ><div><img src="common/menu9p01@2x.png" class="menu-img" /></div>
+            <div class="menu-script">종합관광안내소</div></a
+          >
+          <a href="#" class="menu-item"
+            ><div><img src="common/menu9p02@2x.png" class="menu-img" /></div>
+            <div class="menu-script">1330관광안내전화</div></a
+          >
+          <a href="#" class="menu-item"
+            ><div><img src="common/menu9p03@2x.png" class="menu-img" /></div>
+            <div class="menu-script">관광안내책자</div></a
+          >
+          <a href="#" class="menu-item"
+            ><div><img src="common/menu9p04@2x.png" class="menu-img" /></div>
+            <div class="menu-script">Q&A</div></a
+          >
+        </div>
       </div>
     </main>
-    <footer></footer>
-    test writing github test
+    <footer>
+      <div class="footer-top">
+        <a href="#">정책정보 모음</a>
+        <a href="#">삶의 질을 추구하는 국제슬로시티 김해</a>
+        <a href="#">유니세프 아동친화도시</a>
+        <a href="#">근로복지공단</a>
+        <a href="#">정부24</a>
+        <a href="#">위기상황 생활안전정보</a>
+        <a href="#">경매정보</a>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-select">
+          <select>
+            <option>부서/사업소</option>
+          </select>
+          <select>
+            <option>읍면동</option>
+          </select>
+          <select>
+            <option>유관기관</option>
+          </select>
+          <select>
+            <option>도/시/자치단체</option>
+          </select>
+          <select>
+            <option>김해시청</option>
+          </select>
+        </div>
+        <!-- footer 마저 만들기 -->
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
