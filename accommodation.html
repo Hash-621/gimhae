@@ -6,7 +6,7 @@
     <title>김해에반해 관광포털</title>
     <style>
       * {
-        text-align: center;
+        /* text-align: center; */
         text-decoration: none;
         list-style: none;
       }
@@ -147,7 +147,7 @@
       .main-top {
         height: 200px;
         width: 100%;
-        background-image: url(common/sleep-bg.jpg);
+        background-image: url(common/festival-bg.jpg);
         margin-bottom: 20px;
         color: white;
         display: flex;
@@ -355,7 +355,6 @@
       }
 
       .board-container {
-        height: 2500px;
         padding: 10px;
       }
 
@@ -374,6 +373,81 @@
         align-items: center;
         text-align: center;
         gap: 20px;
+      }
+
+      .list-wrapper {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        padding: 20px 0px 20px 0px;
+        display: flex;
+        align-items: center;
+      }
+
+      .item-details {
+        width: 580px;
+      }
+
+      .item-title {
+        display: flex;
+        margin-left: 30px;
+        gap: 20px;
+        font-size: x-large;
+        font-weight: bold;
+      }
+
+      .item-number {
+        background-color: #c9161e;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        color: white;
+      }
+
+      .item-info {
+        text-align: left;
+        margin-top: 40px;
+        padding-left: 30px;
+        color: gray;
+        font-size: 90%;
+      }
+
+      .item-info li {
+        margin-bottom: 5px;
+      }
+
+      .item-info span {
+        color: black;
+      }
+
+      .item-ratings {
+        width: 260px;
+        height: 160px;
+        border-left: 1px solid gray;
+        text-align: center;
+      }
+
+      .rating-title {
+        margin: 0px 0px 5px 0px;
+        color: gray;
+        font-size: small;
+      }
+
+      .stars {
+        color: goldenrod;
+        font-size: larger;
+      }
+
+      .score {
+        font-size: xx-large;
+        margin: 5px 0px 20px 0px;
+        font-weight: lighter;
+      }
+
+      .item-buttons button {
+        margin: 0px 5px 0px 5px;
+        height: 35px;
+        width: 85px;
       }
     </style>
   </head>
@@ -497,7 +571,9 @@
         <div class="main-container">
           <div class="option-container">
             <div class="totalCount">
-              <p>총 <span>0</span>건의 게시물이 있습니다.</p>
+              <p>
+                총 <span style="color: #c9161e">10</span>건의 게시물이 있습니다.
+              </p>
             </div>
             <div class="option-select">
               <label>
@@ -610,7 +686,8 @@
       <a href="#">TOP</a>
     </div>
 
-    <script src="pagination.js"></script>
+    <script src="js/accommodation.js"></script>
+    <script src="js/pagination.js"></script>
     <script>
       let currentPage = 1; // 현재 페이지
       let totalPage = 0; // 총페이지
@@ -618,10 +695,16 @@
       let firstNumber = 1; // 숫자 시작점
       let lastNumber = 5; // 숫자 종료점
 
-      window.onload = () => {
+      let data;
+
+      window.onload = async () => {
         console.log("준비완료");
 
-        console.log(`총 데이터 개수 ${database.length}`);
+        data = await fetchJsonData();
+
+        console.log(data);
+
+        console.log(`총 데이터 개수 ${data.length}`);
         // 지정된 페이지에서 시작번호와 종료번호 계산하기
         updateFirstlast(1);
 
@@ -634,7 +717,7 @@
         // 이전, 다음 버튼 이벤트
         addMovingButtonListener();
 
-        setPageOf(1);
+        // setPageOf(0);
       };
     </script>
   </body>

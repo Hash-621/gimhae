@@ -11,7 +11,7 @@ function updateFirstlast(targetPage) {
   const pageCount = parseInt(document.getElementById("pagingSize").value);
 
   // 총 페이지수
-  totalPage = Math.ceil(database.length / limit);
+  totalPage = Math.ceil(data.length / limit);
 
   // 그릅수
   pageGroup = Math.ceil(targetPage / pageCount);
@@ -70,49 +70,66 @@ function onClickNumberButton(e) {
   console.log(`${currentPage}으로 이동하기`);
 
   // 페이지 만들기
-  setPageOf(currentPage);
+  // setPageOf(currentPage);
 }
 
-function setPageOf(current) {
-  const contentList = document.getElementById("post-content-list");
+// function setPageOf(current) {
+//   const container = document.getElementById("post-content-list");
+//   container.innerHTML = ""; // 기존 내용 초기화
 
-  // 한눈에 보고 싶은 개수
-  const limitSize = parseInt(document.getElementById("limitSize").value);
+//   let writeHTML = "";
+//   if (data) {
+//     const lines = data;
 
-  // 내용물 청소
-  contentList.innerHTML = "";
+//     for (let i = current; i < lines.length; i++) {
+//       let image = lines[i].images[0];
+//       writeHTML += '<div class="list-wrapper">';
 
-  // 데이터의 시작점
-  const start = limitSize * (current - 1);
+//       writeHTML += "<img src=" + image + " height=200px width=300px />";
 
-  // 데이터의 종료점
-  const end = limitSize * (current - 1) + limitSize;
+//       writeHTML += '<div class="item-details">';
 
-  console.log(`배열의 시작점 ${start} 종료점 ${end}`);
+//       writeHTML += '<div class="item-title">';
+//       writeHTML += '<div class="item-number">' + `${i + 1}` + "</div>";
+//       writeHTML += '<div class="item-name">' + `${lines[i].name}` + "</div>";
+//       writeHTML += "</div>";
 
-  for (let i = start; i < end; i++) {
-    const li = document.createElement("li");
-    li.className = "post-content";
+//       writeHTML += '<ul class="item-info">';
+//       writeHTML +=
+//         "<li>" +
+//         "<span>축제기간 : </span>" +
+//         `${lines[i].sdate}` +
+//         " ~ " +
+//         `${lines[i].edate}` +
+//         "</li>";
+//       writeHTML +=
+//         "<li>" + "<span>행사장소 : </span>" + `${lines[i].address}` + "</li>";
+//       writeHTML +=
+//         "<li>" + "<span>관리기관 : </span>" + `${lines[i].opener}` + "</li>";
+//       writeHTML +=
+//         "<li>" + "<span>전화번호 : </span>" + `${lines[i].phone}` + "</li>";
+//       writeHTML += "</ul>";
 
-    li.innerHTML = `<div class="post-container">
-    <h4 class="post-number">${database[i].id}</h4>
-    <p class="post-title">${database[i].title} </p>
-    </div>`;
+//       writeHTML += "</div>";
 
-    contentList.appendChild(li);
-  }
+//       writeHTML += '<div class="item-ratings">';
+//       writeHTML += '<p class="rating-title">별점 (총 0개의 후기)</p>';
+//       writeHTML += '<div class="stars">☆☆☆☆☆</div>';
+//       writeHTML += '<p class="score">0</p>';
+//       writeHTML += '<div class="item-buttons">';
+//       writeHTML += '<button class="blue-btn">스크랩하기</button>';
+//       writeHTML += '<button class="action-btn">길찾기</button>';
+//       writeHTML += "</div>";
+//       writeHTML += "</div>";
 
-  // 원래 색상으로 초기화
-  const pageNumberButtons = document.querySelectorAll(".number-button");
+//       writeHTML += "</div>";
+//     }
 
-  for (let i = 0; i < pageNumberButtons.length; i++) {
-    pageNumberButtons[i].style.backgroundColor = "lightsteelblue";
-  }
-
-  //현재 버튼 색상변경으로 하이라이팅
-  const currentBtn = document.getElementById(`number-button-${currentPage}`);
-  currentBtn.style.backgroundColor = "red";
-}
+//     container.innerHTML = writeHTML;
+//   } else {
+//     container.innerHTML = "데이터가 없습니다.";
+//   }
+// }
 
 // 이전, 다음 버튼 이벤트 세팅
 function addMovingButtonListener() {
@@ -143,7 +160,7 @@ function onClickPre(e) {
     currentPage = delta;
   }
 
-  setPageOf(currentPage);
+  // setPageOf(currentPage);
 }
 
 function onClickNext(e) {
@@ -165,7 +182,7 @@ function onClickNext(e) {
     currentPage = delta;
   }
 
-  setPageOf(currentPage);
+  // setPageOf(currentPage);
 }
 
 function limitSizeOnChange(value) {
@@ -183,7 +200,7 @@ function limitSizeOnChange(value) {
   // 이전, 다음 버튼 이벤트
   addMovingButtonListener();
 
-  setPageOf(1);
+  // setPageOf(1);
 }
 
 function pagingSizeOnChange(value) {
@@ -201,5 +218,5 @@ function pagingSizeOnChange(value) {
   // 이전, 다음 버튼 이벤트
   addMovingButtonListener();
 
-  setPageOf(1);
+  // setPageOf(1);
 }
